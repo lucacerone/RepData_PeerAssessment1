@@ -1,5 +1,7 @@
 # Reproducible Research: Peer Assessment 1
 
+Some notes on this Rmd file are available in the file NOTES.md
+
 ## Loading required libraries and packages
 
 ```r

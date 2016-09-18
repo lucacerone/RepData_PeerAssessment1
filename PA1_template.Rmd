@@ -9,6 +9,8 @@ output:
     tidy: true
 ---
 
+Some notes on this Rmd file are available in the file NOTES.md
+
 ## Loading required libraries and packages
 ```{r, include = TRUE}
 suppressPackageStartupMessages({
