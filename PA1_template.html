@@ -196,6 +196,8 @@ p</code></pre>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
+<p>The time series show that during weekend the rise in steps starts usually at larger intervals (presumably because people wake up later?), and the peak in steps before interval 1000 is lower.</p>
+<p>However after the interval 1000 the number of steps per interval is usually larger during weekends than weekdays (presumably because people take a walk, go shopping, do sports etc).</p>
 <pre class="r"><code>ts_activity_imputed &lt;- activity_imputed %&gt;% mutate(day_type = factor(weekdays(date) %in% c(&quot;Saturday&quot;,&quot;Sunday&quot;), 
                                               levels = c(TRUE, FALSE), labels = c(&quot;weekend&quot;,&quot;weekday&quot;))) %&gt;%
   group_by(day_type, interval) %&gt;% summarise(steps = mean(steps_imputed)) %&gt;% ungroup() %&gt;%
